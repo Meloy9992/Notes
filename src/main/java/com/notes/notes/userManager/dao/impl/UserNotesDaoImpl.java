@@ -65,7 +65,6 @@ public class UserNotesDaoImpl implements UserNotesDao {
         session.beginTransaction();
         UserNotes userNotes = getById(id);
         session.delete(userNotes);
-        System.out.println(userNotes);
         session.getTransaction().commit();
         session.close();
     }
